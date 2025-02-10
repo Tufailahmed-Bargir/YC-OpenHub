@@ -78,10 +78,10 @@ export default function Page() {
       <header className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-orange-500">YC Open-Source Startups</h1>
+            <h1 className="text-2xl font-bold text-indigo-600">YC Open-Source Startups</h1>
             <Button 
               variant="outline" 
-              className="text-orange-500 border-orange-500 hover:bg-orange-50"
+              className="text-indigo-500 border-indigo-500 hover:bg-indigo-50"
               onClick={clearFilters}
             >
               Clear all filters
@@ -120,7 +120,7 @@ export default function Page() {
                   <label key={batch} className="flex items-center space-x-2">
                     <input 
                       type="checkbox"
-                      className="rounded border-gray-300 text-orange-500 focus:ring-orange-500"
+                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
                       checked={selectedBatches.includes(batch)}
                       onChange={() => toggleSelection(batch, setSelectedBatches, selectedBatches)}
                     />
@@ -138,7 +138,7 @@ export default function Page() {
                   <label key={industry} className="flex items-center space-x-2">
                     <input 
                       type="checkbox" 
-                      className="rounded border-gray-300 text-orange-500 focus:ring-orange-500"
+                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
                       checked={selectedIndustries.includes(industry)}
                       onChange={() => toggleSelection(industry, setSelectedIndustries, selectedIndustries)}
                     />

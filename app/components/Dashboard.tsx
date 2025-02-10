@@ -10,8 +10,8 @@ export default function Dashboard() {
       <header className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-orange-500">YC Startups</h1>
-            <Button variant="outline" className="text-orange-500 border-orange-500 hover:bg-orange-50">
+            <h1 className="text-2xl font-bold text-indigo-500">YC Startups</h1>
+            <Button variant="outline" className="text-indigo-500 border-indigo-500 hover:bg-indigo-50">
               Clear all filters
             </Button>
           </div>
@@ -19,11 +19,11 @@ export default function Dashboard() {
       </header>
 
       {/* Notification Banner */}
-      <div className="bg-orange-50 border-b border-orange-200">
+      <div className="bg-indigo-50 border-b border-indigo-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <p className="text-orange-800">
+          <p className="text-indigo-800">
             Applications for YC Summer 2024 are now open. You can apply{" "}
-            <a href="#" className="font-medium underline hover:text-orange-900">
+            <a href="#" className="font-medium underline hover:text-indigo-900">
               here
             </a>
             .
@@ -44,7 +44,7 @@ export default function Dashboard() {
               </div>
               <div className="mt-4">
                 <label className="flex items-center space-x-2">
-                  <input type="checkbox" className="rounded border-gray-300 text-orange-500 focus:ring-orange-500" />
+                  <input type="checkbox" className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500" />
                   <span className="text-sm text-gray-600">Active (1000+)</span>
                 </label>
               </div>
@@ -55,7 +55,7 @@ export default function Dashboard() {
               <div className="space-y-2">
                 {["S23", "W23", "S22", "W22", "S21"].map((batch) => (
                   <label key={batch} className="flex items-center space-x-2">
-                    <input type="checkbox" className="rounded border-gray-300 text-orange-500 focus:ring-orange-500" />
+                    <input type="checkbox" className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500" />
                     <span className="text-sm text-gray-600">{batch}</span>
                   </label>
                 ))}
@@ -67,7 +67,7 @@ export default function Dashboard() {
               <div className="space-y-2">
                 {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map((industry) => (
                   <label key={industry} className="flex items-center space-x-2">
-                    <input type="checkbox" className="rounded border-gray-300 text-orange-500 focus:ring-orange-500" />
+                    <input type="checkbox" className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500" />
                     <span className="text-sm text-gray-600">{industry}</span>
                   </label>
                 ))}
