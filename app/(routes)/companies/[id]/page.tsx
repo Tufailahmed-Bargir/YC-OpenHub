@@ -1,5 +1,5 @@
 'use client'
-import Filter from "@/app/components/Filter"
+ 
 import { FinalCard } from "@/app/components/FinalCard"
 import { data } from "@/lib/data"
 import { useParams, useRouter } from "next/navigation"

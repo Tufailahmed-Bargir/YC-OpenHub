@@ -1,39 +1,4 @@
-// 'use client'
-// import CardComponent from "@/app/components/CardComp";
-// import Filter from "@/app/components/Filter";
-// import { data } from "@/lib/data";
-// import { useSession } from "next-auth/react";
-// import Link from "next/link";
-// import { redirect } from "next/navigation";
-
-import Filter from "@/app/components/Filter";
-
-// export default function Page() {
-    
-//   return (
-//     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
-//         {/* <Filter /> */}
-//       {data.map((items) => (
-        
-//         <CardComponent
-        
-//         id={items.id}
-       
-//           name={items.name}
-//           one_liner={items.one_liner}
-//           small_logo_thumb_url={items.small_logo_thumb_url}
-//           all_locations={items.all_locations}
-//           industry={items.industry}
-//           website={items.website}
-//           team_size={items.team_size || 1}
-//           subindustry={items.subindustry}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-
-
+ 
 "use client";
 
 import { useState } from "react";

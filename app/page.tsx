@@ -1,4 +1,4 @@
-import Header from "./components/Header"
+ 
 import Hero from "./components/Hero"
 import CompanyGrid from "./components/CompanyGrid"
 import CTA from "./components/CTA"
