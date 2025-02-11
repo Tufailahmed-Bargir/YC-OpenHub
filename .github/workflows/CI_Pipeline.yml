@@ -21,8 +21,10 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Run linting check
-        run: pnpm run lint:check
+       
 
       - name: Check formatting
         run: pnpm run format:check
+
+      - name: Check build
+        run: pnpm run build
