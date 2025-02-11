@@ -1,8 +1,8 @@
-const data = require('./data')
+const data = require("./data");
 
-console.log('lol');
+console.log("lol");
 
 const id = 72;
-const findData = data.find(item => item.id === id); // Returns the object itself
+const findData = data.find((item) => item.id === id); // Returns the object itself
 
-console.log('findData is', findData);
+console.log("findData is", findData);

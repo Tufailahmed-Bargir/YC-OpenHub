@@ -1,7 +1,7 @@
-import { Search } from 'lucide-react'
+import { Search } from "lucide-react";
 // import StartupGrid from "./StartupGrid"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Dashboard() {
   return (
@@ -11,7 +11,10 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-indigo-500">YC Startups</h1>
-            <Button variant="outline" className="text-indigo-500 border-indigo-500 hover:bg-indigo-50">
+            <Button
+              variant="outline"
+              className="text-indigo-500 border-indigo-500 hover:bg-indigo-50"
+            >
               Clear all filters
             </Button>
           </div>
@@ -39,12 +42,19 @@ export default function Dashboard() {
             <div className="bg-white p-4 rounded-lg shadow-sm border">
               <h2 className="font-semibold text-gray-900 mb-4">Filters</h2>
               <div className="relative">
-                <Input type="search" placeholder="Search filters" className="pl-9" />
+                <Input
+                  type="search"
+                  placeholder="Search filters"
+                  className="pl-9"
+                />
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
               </div>
               <div className="mt-4">
                 <label className="flex items-center space-x-2">
-                  <input type="checkbox" className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500" />
+                  <input
+                    type="checkbox"
+                    className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                  />
                   <span className="text-sm text-gray-600">Active (1000+)</span>
                 </label>
               </div>
@@ -55,7 +65,10 @@ export default function Dashboard() {
               <div className="space-y-2">
                 {["S23", "W23", "S22", "W22", "S21"].map((batch) => (
                   <label key={batch} className="flex items-center space-x-2">
-                    <input type="checkbox" className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500" />
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                    />
                     <span className="text-sm text-gray-600">{batch}</span>
                   </label>
                 ))}
@@ -65,12 +78,20 @@ export default function Dashboard() {
             <div className="bg-white p-4 rounded-lg shadow-sm border">
               <h2 className="font-semibold text-gray-900 mb-4">Industries</h2>
               <div className="space-y-2">
-                {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map((industry) => (
-                  <label key={industry} className="flex items-center space-x-2">
-                    <input type="checkbox" className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500" />
-                    <span className="text-sm text-gray-600">{industry}</span>
-                  </label>
-                ))}
+                {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map(
+                  (industry) => (
+                    <label
+                      key={industry}
+                      className="flex items-center space-x-2"
+                    >
+                      <input
+                        type="checkbox"
+                        className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                      />
+                      <span className="text-sm text-gray-600">{industry}</span>
+                    </label>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -79,7 +100,11 @@ export default function Dashboard() {
           <div className="flex-1">
             <div className="flex items-center justify-between mb-6">
               <div className="relative flex-1 max-w-2xl">
-                <Input type="search" placeholder="Search startups..." className="pl-9" />
+                <Input
+                  type="search"
+                  placeholder="Search startups..."
+                  className="pl-9"
+                />
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
               </div>
               <span className="ml-4 text-sm text-gray-500">1000+ results</span>
@@ -89,5 +114,5 @@ export default function Dashboard() {
         </div>
       </main>
     </div>
-  )
+  );
 }

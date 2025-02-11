@@ -1,18 +1,18 @@
-'use client'
-import { Building2, Globe, MapPin, Users } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+"use client";
+import { Building2, Globe, MapPin, Users } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface CompanyCardProps {
-  id: number
-  name: string
-  one_liner: string
-  small_logo_thumb_url: string
-  website: string
-  all_locations: string
-  team_size: number
-  industry: string
-  subindustry: string
+  id: number;
+  name: string;
+  one_liner: string;
+  small_logo_thumb_url: string;
+  website: string;
+  all_locations: string;
+  team_size: number;
+  industry: string;
+  subindustry: string;
 }
 
 export default function CompanyCard({
@@ -38,8 +38,12 @@ export default function CompanyCard({
             className="rounded-xl"
           />
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-xl text-card-foreground mb-1">{name}</h3>
-            <p className="text-sm text-muted-foreground line-clamp-2">{one_liner}</p>
+            <h3 className="font-semibold text-xl text-card-foreground mb-1">
+              {name}
+            </h3>
+            <p className="text-sm text-muted-foreground line-clamp-2">
+              {one_liner}
+            </p>
           </div>
         </div>
       </Link>
@@ -75,5 +79,5 @@ export default function CompanyCard({
         </div>
       </div>
     </div>
-  )
+  );
 }

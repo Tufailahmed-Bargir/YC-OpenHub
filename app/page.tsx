@@ -1,13 +1,11 @@
- 
-import Hero from "./components/Hero"
-import CompanyGrid from "./components/CompanyGrid"
-import CTA from "./components/CTA"
-import Footer from "./components/Footer"
+import Hero from "./components/Hero";
+import CompanyGrid from "./components/CompanyGrid";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      
       <main className="flex-grow">
         <Hero />
         <CompanyGrid />
@@ -15,6 +13,5 @@ export default function Home() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
-

@@ -5,7 +5,6 @@ Welcome to **YC Open Source**, a curated list of over 150 open-source startups t
 ![Screenshot 2025-02-10 232922](https://github.com/user-attachments/assets/8fdc7684-d1ed-45aa-8b20-676c2af6febd)
 ![Screenshot 2025-02-10 233405](https://github.com/user-attachments/assets/badf9fa6-af5d-4168-8cc4-b58907db7ce5)
 
-
 ## Table of Contents
 
 - [About](#about)
@@ -22,7 +21,6 @@ This project, **YC Open Source**, is a community-driven effort to catalog and hi
 ## Startups List
 
 Below is a list of 150+ YC-backed open-source startups. The list is categorized by industry, technology, or the type of open-source project they are associated with.
- 
 
 ## Contribution Guidelines
 
@@ -33,10 +31,9 @@ We welcome contributions to this project! If you know of a YC-backed open-source
 3. **Submit a Pull Request**: Once you've made your changes, submit a pull request with a brief description of the startup and why it should be included.
 
 Please ensure that the startup meets the following criteria:
+
 - It must be a YC-backed company.
 - It must have a significant open-source component (e.g., open-source core product, major contributions to open-source projects).
-
- 
 
 ---
 

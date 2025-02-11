@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -9,7 +9,8 @@ export default function CTA() {
           <span className="block">Explore open-source projects today.</span>
         </h2>
         <p className="mt-4 text-lg leading-6 text-indigo-200">
-          Join the community of developers contributing to innovative open-source projects from Y Combinator companies.
+          Join the community of developers contributing to innovative
+          open-source projects from Y Combinator companies.
         </p>
         <Link
           href="/Dash"
@@ -19,6 +20,5 @@ export default function CTA() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
-

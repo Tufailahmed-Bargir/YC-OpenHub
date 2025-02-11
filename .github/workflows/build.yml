@@ -29,12 +29,12 @@ jobs:
       - name: Run ESLint
         run: npx eslint . --ext .js,.jsx,.ts,.tsx
 
-      # # Step 5: Run Prettier for code formatting
-      # - name: Run Prettier
-      #   run: npx prettier --check .
+      # Step 5: Run Prettier for code formatting
+      - name: Run Prettier
+        run: npm run Prettier .
 
       # Step 6: Build the Next.js project
       - name: Build Next.js project
         run: npm run build
 
-       
+      

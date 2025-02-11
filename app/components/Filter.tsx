@@ -92,8 +92,6 @@
 //   )
 // }
 
-
-
 "use client";
 
 import { useState } from "react";
@@ -106,10 +104,16 @@ export default function Filter() {
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const toggleSelection = (value: string, setFunction: Function, currentValues: string[]) => {
-    setFunction(currentValues.includes(value) 
-      ? currentValues.filter(item => item !== value) 
-      : [...currentValues, value]);
+  const toggleSelection = (
+    value: string,
+    setFunction: Function,
+    currentValues: string[],
+  ) => {
+    setFunction(
+      currentValues.includes(value)
+        ? currentValues.filter((item) => item !== value)
+        : [...currentValues, value],
+    );
   };
 
   const clearFilters = () => {
@@ -125,8 +129,8 @@ export default function Filter() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-indigo-500">YC Startups</h1>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="text-indigo-500 border-indigo-500 hover:bg-indigo-50"
               onClick={clearFilters}
             >
@@ -159,9 +163,9 @@ export default function Filter() {
               <h2 className="font-semibold text-gray-900 mb-4">Filters</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-                <Input 
-                  type="search" 
-                  placeholder="Search filters" 
+                <Input
+                  type="search"
+                  placeholder="Search filters"
                   className="pl-9"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -175,11 +179,17 @@ export default function Filter() {
               <div className="space-y-2">
                 {["S23", "W23", "S22", "W22", "S21"].map((batch) => (
                   <label key={batch} className="flex items-center space-x-2">
-                    <input 
+                    <input
                       type="checkbox"
                       className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
                       checked={selectedBatches.includes(batch)}
-                      onChange={() => toggleSelection(batch, setSelectedBatches, selectedBatches)}
+                      onChange={() =>
+                        toggleSelection(
+                          batch,
+                          setSelectedBatches,
+                          selectedBatches,
+                        )
+                      }
                     />
                     <span className="text-sm text-gray-600">{batch}</span>
                   </label>
@@ -191,17 +201,28 @@ export default function Filter() {
             <div className="bg-white p-4 rounded-lg shadow-sm border">
               <h2 className="font-semibold text-gray-900 mb-4">Industries</h2>
               <div className="space-y-2">
-                {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map((industry) => (
-                  <label key={industry} className="flex items-center space-x-2">
-                    <input 
-                      type="checkbox" 
-                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
-                      checked={selectedIndustries.includes(industry)}
-                      onChange={() => toggleSelection(industry, setSelectedIndustries, selectedIndustries)}
-                    />
-                    <span className="text-sm text-gray-600">{industry}</span>
-                  </label>
-                ))}
+                {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map(
+                  (industry) => (
+                    <label
+                      key={industry}
+                      className="flex items-center space-x-2"
+                    >
+                      <input
+                        type="checkbox"
+                        className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                        checked={selectedIndustries.includes(industry)}
+                        onChange={() =>
+                          toggleSelection(
+                            industry,
+                            setSelectedIndustries,
+                            selectedIndustries,
+                          )
+                        }
+                      />
+                      <span className="text-sm text-gray-600">{industry}</span>
+                    </label>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -211,9 +232,9 @@ export default function Filter() {
             <div className="flex items-center justify-between mb-6">
               <div className="relative flex-1 max-w-2xl">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-                <Input 
-                  type="search" 
-                  placeholder="Search startups..." 
+                <Input
+                  type="search"
+                  placeholder="Search startups..."
                   className="pl-9"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

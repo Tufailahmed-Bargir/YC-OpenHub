@@ -1,4 +1,3 @@
- 
 "use client";
 
 import { useState } from "react";
@@ -9,17 +8,22 @@ import CardComponent from "@/app/components/CardComp"; // Ensure correct import
 import { data } from "@/lib/data";
 
 // Dummy data (Replace with real data source)
- 
 
 export default function Page() {
   const [selectedBatches, setSelectedBatches] = useState<string[]>([]);
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const toggleSelection = (value: string, setFunction: Function, currentValues: string[]) => {
-    setFunction(currentValues.includes(value) 
-      ? currentValues.filter(item => item !== value) 
-      : [...currentValues, value]);
+  const toggleSelection = (
+    value: string,
+    setFunction: Function,
+    currentValues: string[],
+  ) => {
+    setFunction(
+      currentValues.includes(value)
+        ? currentValues.filter((item) => item !== value)
+        : [...currentValues, value],
+    );
   };
 
   const clearFilters = () => {
@@ -30,9 +34,14 @@ export default function Page() {
 
   // Filtering logic
   const filteredData = data.filter((item) => {
-    const matchesBatch = selectedBatches.length === 0 || selectedBatches.includes(item.batch);
-    const matchesIndustry = selectedIndustries.length === 0 || selectedIndustries.includes(item.industry);
-    const matchesSearch = searchQuery === "" || item.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesBatch =
+      selectedBatches.length === 0 || selectedBatches.includes(item.batch);
+    const matchesIndustry =
+      selectedIndustries.length === 0 ||
+      selectedIndustries.includes(item.industry);
+    const matchesSearch =
+      searchQuery === "" ||
+      item.name.toLowerCase().includes(searchQuery.toLowerCase());
 
     return matchesBatch && matchesIndustry && matchesSearch;
   });
@@ -43,9 +52,11 @@ export default function Page() {
       <header className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-indigo-600">YC Open-Source Startups</h1>
-            <Button 
-              variant="outline" 
+            <h1 className="text-2xl font-bold text-indigo-600">
+              YC Open-Source Startups
+            </h1>
+            <Button
+              variant="outline"
               className="text-indigo-500 border-indigo-500 hover:bg-indigo-50"
               onClick={clearFilters}
             >
@@ -54,8 +65,6 @@ export default function Page() {
           </div>
         </div>
       </header>
-
-     
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -67,9 +76,9 @@ export default function Page() {
               <h2 className="font-semibold text-gray-900 mb-4">Filters</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-                <Input 
-                  type="search" 
-                  placeholder="Search filters" 
+                <Input
+                  type="search"
+                  placeholder="Search filters"
                   className="pl-9"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -83,11 +92,17 @@ export default function Page() {
               <div className="space-y-2">
                 {["S23", "W23", "S22", "W22", "S21"].map((batch) => (
                   <label key={batch} className="flex items-center space-x-2">
-                    <input 
+                    <input
                       type="checkbox"
                       className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
                       checked={selectedBatches.includes(batch)}
-                      onChange={() => toggleSelection(batch, setSelectedBatches, selectedBatches)}
+                      onChange={() =>
+                        toggleSelection(
+                          batch,
+                          setSelectedBatches,
+                          selectedBatches,
+                        )
+                      }
                     />
                     <span className="text-sm text-gray-600">{batch}</span>
                   </label>
@@ -99,17 +114,28 @@ export default function Page() {
             <div className="bg-white p-4 rounded-lg shadow-sm border">
               <h2 className="font-semibold text-gray-900 mb-4">Industries</h2>
               <div className="space-y-2">
-                {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map((industry) => (
-                  <label key={industry} className="flex items-center space-x-2">
-                    <input 
-                      type="checkbox" 
-                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
-                      checked={selectedIndustries.includes(industry)}
-                      onChange={() => toggleSelection(industry, setSelectedIndustries, selectedIndustries)}
-                    />
-                    <span className="text-sm text-gray-600">{industry}</span>
-                  </label>
-                ))}
+                {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map(
+                  (industry) => (
+                    <label
+                      key={industry}
+                      className="flex items-center space-x-2"
+                    >
+                      <input
+                        type="checkbox"
+                        className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                        checked={selectedIndustries.includes(industry)}
+                        onChange={() =>
+                          toggleSelection(
+                            industry,
+                            setSelectedIndustries,
+                            selectedIndustries,
+                          )
+                        }
+                      />
+                      <span className="text-sm text-gray-600">{industry}</span>
+                    </label>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -119,15 +145,17 @@ export default function Page() {
             <div className="flex items-center justify-between mb-6">
               <div className="relative flex-1 max-w-2xl">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-                <Input 
-                  type="search" 
-                  placeholder="Search startups..." 
+                <Input
+                  type="search"
+                  placeholder="Search startups..."
                   className="pl-9"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
-              <span className="ml-4 text-sm text-gray-500">{filteredData.length} results</span>
+              <span className="ml-4 text-sm text-gray-500">
+                {filteredData.length} results
+              </span>
             </div>
 
             {/* Cards Grid */}
@@ -148,7 +176,9 @@ export default function Page() {
                   />
                 ))
               ) : (
-                <p className="text-gray-500 text-center w-full">No startups found</p>
+                <p className="text-gray-500 text-center w-full">
+                  No startups found
+                </p>
               )}
             </div>
           </div>
