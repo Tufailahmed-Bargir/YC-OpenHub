@@ -7,7 +7,8 @@
     "build": "prisma generate && next build",
     "postinstall": "prisma generate",
     "start": "next start",
-    "lint": "next lint",
+    "lint:check": "next lint",
+    "format:check": "prettier --check .",
     "prepare": "husky",
     "prettier": "pnpm exec prettier . --write"
   },
