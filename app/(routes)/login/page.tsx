@@ -1,10 +1,10 @@
 import Login from "@/app/components/login";
-import { NEXT_AUTH_CONFIG } from "@/lib/auth";
+// import { NEXT_AUTH_CONFIG } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 async function getUser() {
-  const session = await getServerSession(NEXT_AUTH_CONFIG);
+  const session = await getServerSession();
   return session;
 }
 
