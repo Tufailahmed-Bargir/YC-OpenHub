@@ -1,6 +1,6 @@
 # YC Open Source
 
-Welcome to **YC Open Source**, a curated list of over 150 open-source startups that have been part of Y Combinator (YC). This project aims to showcase the incredible work being done by YC-backed companies in the open-source community. Whether you're a developer, entrepreneur, or just curious about open-source innovation, this repository is a great resource to explore.
+Welcome to **YC OpenHub**, a curated list of over 150 open-source startups that have been part of Y Combinator (YC). This project aims to showcase the incredible work being done by YC-backed companies in the open-source community. Whether you're a developer, entrepreneur, or just curious about open-source innovation, this repository is a great resource to explore.
 
 ![Screenshot 2025-02-10 232922](https://github.com/user-attachments/assets/8fdc7684-d1ed-45aa-8b20-676c2af6febd)
 ![Screenshot 2025-02-10 233405](https://github.com/user-attachments/assets/badf9fa6-af5d-4168-8cc4-b58907db7ce5)
