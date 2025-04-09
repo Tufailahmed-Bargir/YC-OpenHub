@@ -10,7 +10,7 @@ interface CompanyCardProps {
   small_logo_thumb_url: string;
   website: string;
   all_locations: string;
-  team_size: number;
+  team_size: number | null;
   industry: string;
   subindustry: string;
 }
@@ -68,7 +68,7 @@ export default function CompanyCard({
 
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Users className="h-4 w-4 shrink-0" />
-          <span>{team_size} team members</span>
+          <span>{team_size || "Unknown"} team members</span>
         </div>
 
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
