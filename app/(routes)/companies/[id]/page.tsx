@@ -50,7 +50,7 @@ export default function CompanyPage() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-[#111111] mb-4">
             Company Not Found
           </h1>
           <p className="text-gray-600 mb-8">
@@ -58,7 +58,7 @@ export default function CompanyPage() {
           </p>
           <Button
             onClick={() => window.history.back()}
-            className="bg-indigo-600 hover:bg-indigo-700"
+            className="bg-[#ff6b00] hover:bg-[#ff5500] text-white"
           >
             Go Back
           </Button>
@@ -86,7 +86,7 @@ export default function CompanyPage() {
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                    <h1 className="text-3xl font-bold text-[#111111] mb-2">
                       {company.name}
                     </h1>
                     <p className="text-lg text-gray-600">
@@ -98,7 +98,7 @@ export default function CompanyPage() {
                       <Button
                         size="lg"
                         onClick={() => window.open(company.website, "_blank")}
-                        className="bg-indigo-600 hover:bg-indigo-700 text-white flex items-center gap-2"
+                        className="bg-[#ff6b00] hover:bg-[#ff5500] text-white flex items-center gap-2"
                       >
                         <Globe className="h-5 w-5" />
                         Visit Website
@@ -110,7 +110,7 @@ export default function CompanyPage() {
                         size="lg"
                         variant="outline"
                         onClick={() => window.open(company.github_url, "_blank")}
-                        className="flex items-center gap-2 border-2"
+                        className="flex items-center gap-2 border-2 text-[#111111] border-[#111111] hover:bg-[#111111] hover:text-white"
                       >
                         <GitBranch className="h-5 w-5" />
                         View GitHub
@@ -128,13 +128,13 @@ export default function CompanyPage() {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-white rounded-lg shadow-sm">
-                  <MapPin className="h-5 w-5 text-indigo-600" />
+                  <MapPin className="h-5 w-5 text-[#ff6b00]" />
                 </div>
                 <span className="text-gray-700">{company.all_locations}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-white rounded-lg shadow-sm">
-                  <Users className="h-5 w-5 text-indigo-600" />
+                  <Users className="h-5 w-5 text-[#ff6b00]" />
                 </div>
                 <span className="text-gray-700">
                   {company.team_size || "Unknown"} team members
@@ -142,7 +142,7 @@ export default function CompanyPage() {
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-white rounded-lg shadow-sm">
-                  <Building2 className="h-5 w-5 text-indigo-600" />
+                  <Building2 className="h-5 w-5 text-[#ff6b00]" />
                 </div>
                 <span className="text-gray-700">
                   {company.industry} • {company.subindustry}
@@ -150,7 +150,7 @@ export default function CompanyPage() {
               </div>
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-white rounded-lg shadow-sm">
-                  <Calendar className="h-5 w-5 text-indigo-600" />
+                  <Calendar className="h-5 w-5 text-[#ff6b00]" />
                 </div>
                 <span className="text-gray-700">YC Batch: {company.batch}</span>
               </div>
@@ -159,14 +159,14 @@ export default function CompanyPage() {
             <div className="space-y-6">
               <div className="flex items-start gap-3">
                 <div className="p-2 bg-white rounded-lg shadow-sm">
-                  <Tag className="h-5 w-5 text-indigo-600" />
+                  <Tag className="h-5 w-5 text-[#ff6b00]" />
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {company.tags?.map((tag: string) => (
                     <Badge
                       key={tag}
                       className={cn(
-                        "bg-white text-gray-700 hover:bg-gray-100",
+                        "bg-white text-[#111111] hover:bg-[#ff6b00] hover:text-white",
                         "transition-colors duration-200"
                       )}
                     >
@@ -180,7 +180,7 @@ export default function CompanyPage() {
 
           {/* Description Section */}
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-[#111111] mb-6">
               About {company.name}
             </h2>
             <div className="prose max-w-none">

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-4 flex items-center justify-between">
           <div className="flex items-center">
@@ -19,21 +19,21 @@ export default function Header() {
                 height={40}
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-semibold text-gray-900">
-                YC Open Source
+              <span className="text-xl font-bold text-[#111111] hover:text-[#ff6b00] transition-colors">
+                YC OpenHub
               </span>
             </Link>
           </div>
           <div className="ml-10 space-x-8 flex items-center">
             <Link
               href="/Dash"
-              className="text-base font-medium text-gray-600 hover:text-gray-900"
+              className="text-base font-medium text-[#111111] hover:text-[#ff6b00] transition-colors"
             >
               Companies
             </Link>
             <Button
               variant="default"
-              className="bg-indigo-600 hover:bg-indigo-700"
+              className="bg-[#ff6b00] hover:bg-[#ff5500] text-white transition-colors"
               asChild
             >
               <Link href="https://www.ycombinator.com/companies" target="_blank">

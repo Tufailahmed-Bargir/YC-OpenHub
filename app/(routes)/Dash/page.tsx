@@ -107,12 +107,12 @@ export default function Page() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-indigo-600">
+            <h1 className="text-2xl font-bold text-[#111111]">
               YC Open-Source Startups
             </h1>
             <Button
               variant="outline"
-              className="text-indigo-500 border-indigo-500 hover:bg-indigo-50"
+              className="text-[#ff6b00] border-[#ff6b00] hover:bg-[#ff6b00] hover:text-white"
               onClick={clearFilters}
             >
               Clear all filters
@@ -125,7 +125,7 @@ export default function Page() {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-64 space-y-6 lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] lg:overflow-y-auto">
             <div className="bg-white p-4 rounded-lg shadow-sm border">
-              <h2 className="font-semibold text-gray-900 mb-4">Filters</h2>
+              <h2 className="font-semibold text-[#111111] mb-4">Filters</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
                 <Input
@@ -139,13 +139,13 @@ export default function Page() {
             </div>
 
             <div className="bg-white p-4 rounded-lg shadow-sm border">
-              <h2 className="font-semibold text-gray-900 mb-4">Batch</h2>
+              <h2 className="font-semibold text-[#111111] mb-4">Batch</h2>
               <div className="space-y-2">
                 {["S23", "W23", "S22", "W22", "S21"].map((batch) => (
                   <label key={batch} className="flex items-center space-x-2 hover:bg-gray-50 p-1 rounded cursor-pointer">
                     <input
                       type="checkbox"
-                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                      className="rounded border-gray-300 text-[#ff6b00] focus:ring-[#ff6b00]"
                       checked={selectedBatches.includes(batch)}
                       onChange={() => toggleSelection(batch, setSelectedBatches, selectedBatches)}
                     />
@@ -156,13 +156,13 @@ export default function Page() {
             </div>
 
             <div className="bg-white p-4 rounded-lg shadow-sm border">
-              <h2 className="font-semibold text-gray-900 mb-4">Industries</h2>
+              <h2 className="font-semibold text-[#111111] mb-4">Industries</h2>
               <div className="space-y-2">
                 {["B2B", "SaaS", "AI", "FinTech", "Healthcare"].map((industry) => (
                   <label key={industry} className="flex items-center space-x-2 hover:bg-gray-50 p-1 rounded cursor-pointer">
                     <input
                       type="checkbox"
-                      className="rounded border-gray-300 text-indigo-500 focus:ring-indigo-500"
+                      className="rounded border-gray-300 text-[#ff6b00] focus:ring-[#ff6b00]"
                       checked={selectedIndustries.includes(industry)}
                       onChange={() => toggleSelection(industry, setSelectedIndustries, selectedIndustries)}
                     />
@@ -186,7 +186,7 @@ export default function Page() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
-                <span className="ml-4 text-sm font-medium text-gray-700">
+                <span className="ml-4 text-sm font-medium text-[#111111]">
                   {filteredData.length} results
                 </span>
               </div>
@@ -209,7 +209,11 @@ export default function Page() {
                 ) : (
                   <div className="col-span-2 flex flex-col items-center justify-center py-12">
                     <p className="text-gray-500 text-lg mb-4">No startups found</p>
-                    <Button variant="outline" onClick={clearFilters}>
+                    <Button 
+                      variant="outline" 
+                      onClick={clearFilters}
+                      className="text-[#ff6b00] border-[#ff6b00] hover:bg-[#ff6b00] hover:text-white"
+                    >
                       Clear all filters
                     </Button>
                   </div>
@@ -222,7 +226,7 @@ export default function Page() {
                     variant="outline"
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1 || isLoading}
-                    className="w-full sm:w-auto flex items-center gap-2"
+                    className="w-full sm:w-auto flex items-center gap-2 text-[#111111] border-[#111111] hover:bg-[#111111] hover:text-white"
                   >
                     <ChevronLeft className="h-4 w-4" />
                     Previous
@@ -236,8 +240,8 @@ export default function Page() {
                           variant={currentPage === page ? "default" : "outline"}
                           className={`w-10 h-10 ${
                             currentPage === page
-                              ? "bg-indigo-600 text-white"
-                              : "text-gray-600"
+                              ? "bg-[#ff6b00] text-white hover:bg-[#ff5500]"
+                              : "text-[#111111] border-[#111111] hover:bg-[#111111] hover:text-white"
                           }`}
                           onClick={() => handlePageChange(page)}
                           disabled={isLoading}
@@ -256,7 +260,7 @@ export default function Page() {
                     variant="outline"
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages || isLoading}
-                    className="w-full sm:w-auto flex items-center gap-2"
+                    className="w-full sm:w-auto flex items-center gap-2 text-[#111111] border-[#111111] hover:bg-[#111111] hover:text-white"
                   >
                     Next
                     <ChevronRight className="h-4 w-4" />
